@@ -1,9 +1,9 @@
 import java.util.List;
 import java.util.ArrayList;
 
-class Video {
+class VideoIP {
   private String title;
-  public Video(String title) {
+  public VideoIP(String title) {
     this.title = title;
   }
 
@@ -13,16 +13,16 @@ class Video {
 }
 
 class VideoPlaylist {
-  List<Video> videoList;
+  List<VideoIP> videoList;
   public VideoPlaylist() {
     videoList = new ArrayList<>();
   }
 
-  public void addVideo(Video video) {
+  public void addVideo(VideoIP video) {
     videoList.add(video);
   }
 
-  public List<Video> getVideos() {
+  public List<VideoIP> getVideos() {
     return videoList;
   }
 }
@@ -36,10 +36,10 @@ class VideoPlaylist {
 public class BeforeIP {
   public static void main(String args[]) {
     VideoPlaylist playlist = new VideoPlaylist();
-    playlist.addVideo(new Video("video1"));
-    playlist.addVideo(new Video("video2"));
+    playlist.addVideo(new VideoIP("video1"));
+    playlist.addVideo(new VideoIP("video2"));
 
-    for(Video v : playlist.getVideos()) {
+    for(VideoIP v : playlist.getVideos()) {
       System.out.println(v.getTitle());
     }
   }
